@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Elements and Attributes Guide</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Elements and Attributes</h1>
+        <p>A plain-HTML guide to the structure and vocabulary of web pages.</p>
+        <nav aria-label="Contents">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#basics">HTML basics</a></li>
+                <li><a href="#document">Document structure</a></li>
+                <li><a href="#text">Text elements</a></li>
+                <li><a href="#grouping">Grouping and lists</a></li>
+                <li><a href="#links-media">Links and embedded content</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#semantic">Semantic page sections</a></li>
+                <li><a href="#interactive">Interactive and scripting elements</a></li>
+                <li><a href="#attributes">Attributes</a></li>
+                <li><a href="#obsolete">Obsolete elements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="basics">
+            <h2>1. HTML basics</h2>
+            <p>HTML means HyperText Markup Language. It describes the structure and meaning of web content. A browser reads HTML and presents its elements as a web page.</p>
+            <dl>
+                <dt>Tag</dt>
+                <dd>The markup written between angle brackets, such as <code>&lt;p&gt;</code> or <code>&lt;/p&gt;</code>.</dd>
+                <dt>Element</dt>
+                <dd>The complete structure: usually an opening tag, content, and a closing tag. For example, <code>&lt;p&gt;Hello&lt;/p&gt;</code>.</dd>
+                <dt>Attribute</dt>
+                <dd>Extra information written in an element's opening tag, such as <code>href</code> in <code>&lt;a href="page.html"&gt;</code>.</dd>
+                <dt>Content</dt>
+                <dd>The text or other elements placed between an element's opening and closing tags.</dd>
+            </dl>
+            <p>Most elements have an opening and closing tag. Void elements have no closing tag and cannot contain content. Examples include <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>, and <code>&lt;input&gt;</code>. In HTML, the slash in <code>&lt;img /&gt;</code> is optional.</p>
+            <p>Element names are generally written in lowercase. Nest elements in the correct order: close the most recently opened element first.</p>
+            <pre><code>&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; text.&lt;/p&gt;</code></pre>
+        </section>
+
+        <section id="document">
+            <h2>2. Document structure</h2>
+            <dl>
+                <dt><code>&lt;!DOCTYPE html&gt;</code></dt>
+                <dd>Declares an HTML document and asks browsers to use standards mode. It is a declaration, not an HTML element.</dd>
+                <dt><code>&lt;html&gt;</code></dt>
+                <dd>The root element containing the entire page. The <code>lang</code> attribute identifies the page's language.</dd>
+                <dt><code>&lt;head&gt;</code></dt>
+                <dd>Contains document information and resource references that are not the main page content.</dd>
+                <dt><code>&lt;title&gt;</code></dt>
+                <dd>Sets the document title, commonly shown in the browser tab and used by bookmarks and search results.</dd>
+                <dt><code>&lt;meta&gt;</code></dt>
+                <dd>Provides metadata, such as character encoding, a description, or a responsive viewport setting.</dd>
+                <dt><code>&lt;link&gt;</code></dt>
+                <dd>Links the document to an external resource, often a website icon or a stylesheet.</dd>
+                <dt><code>&lt;body&gt;</code></dt>
+                <dd>Contains the content displayed as part of the page.</dd>
+            </dl>
+            <p>A minimal document begins with the doctype, followed by <code>html</code>, <code>head</code>, and <code>body</code>. This page uses that structure.</p>
+        </section>
+
+        <section id="text">
+            <h2>3. Text elements</h2>
+            <dl>
+                <dt><code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code></dt>
+                <dd>Headings arranged by importance and level. Use them in a logical hierarchy; do not choose a heading only for its default appearance.</dd>
+                <dt><code>&lt;p&gt;</code></dt>
+                <dd>A paragraph of text.</dd>
+                <dt><code>&lt;br&gt;</code></dt>
+                <dd>A line break within text, such as in an address or poem. It is a void element.</dd>
+                <dt><code>&lt;hr&gt;</code></dt>
+                <dd>A thematic break between paragraphs or sections. It is a void element.</dd>
+                <dt><code>&lt;strong&gt;</code></dt>
+                <dd>Marks content as strongly important.</dd>
+                <dt><code>&lt;em&gt;</code></dt>
+                <dd>Marks stress emphasis.</dd>
+                <dt><code>&lt;b&gt;</code></dt>
+                <dd>Draws attention to text without adding importance or emphasis.</dd>
+                <dt><code>&lt;i&gt;</code></dt>
+                <dd>Marks text set apart from ordinary prose, such as a technical term or a phrase in another language.</dd>
+                <dt><code>&lt;u&gt;</code></dt>
+                <dd>Marks text with a non-textual annotation. Do not use it just to imitate a link.</dd>
+                <dt><code>&lt;s&gt;</code></dt>
+                <dd>Marks text that is no longer accurate or relevant.</dd>
+                <dt><code>&lt;small&gt;</code></dt>
+                <dd>Marks side comments or small print.</dd>
+                <dt><code>&lt;mark&gt;</code></dt>
+                <dd>Marks text as relevant to the current context.</dd>
+                <dt><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code></dt>
+                <dd>Mark subscript and superscript text.</dd>
+                <dt><code>&lt;code&gt;</code></dt>
+                <dd>Marks a short fragment of computer code.</dd>
+                <dt><code>&lt;pre&gt;</code></dt>
+                <dd>Represents preformatted text, preserving spaces and line breaks.</dd>
+                <dt><code>&lt;kbd&gt;</code>, <code>&lt;samp&gt;</code>, and <code>&lt;var&gt;</code></dt>
+                <dd>Represent user input, program output, and a variable, respectively.</dd>
+                <dt><code>&lt;q&gt;</code> and <code>&lt;blockquote&gt;</code></dt>
+                <dd>Represent a short inline quotation and a longer quoted section.</dd>
+                <dt><code>&lt;cite&gt;</code></dt>
+                <dd>Identifies the title of a creative work or other cited source.</dd>
+                <dt><code>&lt;abbr&gt;</code></dt>
+                <dd>Marks an abbreviation. Its optional <code>title</code> attribute can provide the expanded form.</dd>
+                <dt><code>&lt;time&gt;</code></dt>
+                <dd>Marks a date or time. The optional <code>datetime</code> attribute supplies a machine-readable value.</dd>
+                <dt><code>&lt;data&gt;</code></dt>
+                <dd>Connects visible content with a machine-readable value using its <code>value</code> attribute.</dd>
+                <dt><code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code></dt>
+                <dd>Mark deleted and inserted content. They can use <code>cite</code> and <code>datetime</code> attributes.</dd>
+                <dt><code>&lt;bdi&gt;</code> and <code>&lt;bdo&gt;</code></dt>
+                <dd>Isolate text with a different writing direction, or explicitly set a text direction with <code>dir</code>.</dd>
+                <dt><code>&lt;span&gt;</code></dt>
+                <dd>A generic inline container with no meaning of its own.</dd>
+                <dt><code>&lt;wbr&gt;</code></dt>
+                <dd>Suggests a possible line-break position in a long word or string.</dd>
+                <dt><code>&lt;ruby&gt;</code>, <code>&lt;rt&gt;</code>, and <code>&lt;rp&gt;</code></dt>
+                <dd>Represent ruby annotations, often pronunciation guides for East Asian text, including fallback parentheses.</dd>
+            </dl>
+        </section>
+
+        <section id="grouping">
+            <h2>4. Grouping and lists</h2>
+            <dl>
+                <dt><code>&lt;div&gt;</code></dt>
+                <dd>A generic block container with no meaning of its own.</dd>
+                <dt><code>&lt;ul&gt;</code></dt>
+                <dd>An unordered list, usually shown with bullets.</dd>
+                <dt><code>&lt;ol&gt;</code></dt>
+                <dd>An ordered list. Attributes include <code>start</code>, <code>reversed</code>, and <code>type</code>.</dd>
+                <dt><code>&lt;li&gt;</code></dt>
+                <dd>A list item inside an ordered or unordered list.</dd>
+                <dt><code>&lt;dl&gt;</code></dt>
+                <dd>A description list for terms and their descriptions or other name-value groups.</dd>
+                <dt><code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code></dt>
+                <dd>A term or name and its description or value in a description list.</dd>
+                <dt><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code></dt>
+                <dd>Group self-contained content, such as an illustration, with an optional caption.</dd>
+            </dl>
+        </section>
+
+        <section id="links-media">
+            <h2>5. Links and embedded content</h2>
+            <dl>
+                <dt><code>&lt;a&gt;</code></dt>
+                <dd>Creates a hyperlink. Common attributes include <code>href</code>, <code>target</code>, <code>rel</code>, <code>download</code>, and <code>hreflang</code>.</dd>
+                <dt><code>&lt;img&gt;</code></dt>
+                <dd>Embeds an image. Use <code>src</code> for its address and a meaningful <code>alt</code> description when the image conveys information. It is a void element.</dd>
+                <dt><code>&lt;picture&gt;</code> and <code>&lt;source&gt;</code></dt>
+                <dd>Offer different media sources or image formats. A <code>source</code> can use <code>srcset</code>, <code>sizes</code>, <code>media</code>, and <code>type</code>.</dd>
+                <dt><code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></dt>
+                <dd>Embed sound and video. Common attributes include <code>controls</code>, <code>src</code>, <code>autoplay</code>, <code>loop</code>, and <code>muted</code>. Prefer providing controls and captions where appropriate.</dd>
+                <dt><code>&lt;track&gt;</code></dt>
+                <dd>Provides timed text such as subtitles for audio or video. Common attributes include <code>kind</code>, <code>src</code>, <code>srclang</code>, and <code>label</code>.</dd>
+                <dt><code>&lt;iframe&gt;</code></dt>
+                <dd>Embeds another page. Important attributes include <code>src</code>, <code>title</code>, <code>width</code>, <code>height</code>, <code>loading</code>, and <code>sandbox</code>.</dd>
+                <dt><code>&lt;embed&gt;</code> and <code>&lt;object&gt;</code></dt>
+                <dd>Embed external resources. Their use depends on the resource and browser support.</dd>
+                <dt><code>&lt;param&gt;</code></dt>
+                <dd>Historically supplied parameters to an <code>object</code>; it is obsolete and should not be used in new pages.</dd>
+                <dt><code>&lt;map&gt;</code> and <code>&lt;area&gt;</code></dt>
+                <dd>Define clickable regions on an image. <code>area</code> uses attributes such as <code>shape</code>, <code>coords</code>, and <code>href</code>.</dd>
+                <dt><code>&lt;canvas&gt;</code></dt>
+                <dd>Provides a drawable bitmap area, typically controlled with JavaScript. Without JavaScript, include fallback content inside it.</dd>
+                <dt><code>&lt;svg&gt;</code></dt>
+                <dd>Embeds scalable vector graphics markup in a page.</dd>
+                <dt><code>&lt;math&gt;</code></dt>
+                <dd>Embeds MathML mathematical notation where supported.</dd>
+            </dl>
+        </section>
+
+        <section id="tables">
+            <h2>6. Tables</h2>
+            <p>Use a table for data arranged in rows and columns, not to lay out a page.</p>
+            <dl>
+                <dt><code>&lt;table&gt;</code></dt>
+                <dd>Contains tabular data.</dd>
+                <dt><code>&lt;caption&gt;</code></dt>
+                <dd>Provides a title or explanation for a table.</dd>
+                <dt><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code></dt>
+                <dd>Group the header, main body, and footer rows.</dd>
+                <dt><code>&lt;tr&gt;</code></dt>
+                <dd>A table row.</dd>
+                <dt><code>&lt;th&gt;</code></dt>
+                <dd>A header cell. The <code>scope</code> attribute can identify whether it labels a row or column.</dd>
+                <dt><code>&lt;td&gt;</code></dt>
+                <dd>A data cell. <code>colspan</code> and <code>rowspan</code> can make a cell span columns or rows.</dd>
+                <dt><code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code></dt>
+                <dd>Identify groups of table columns.</dd>
+            </dl>
+        </section>
+
+        <section id="forms">
+            <h2>7. Forms</h2>
+            <p>Forms collect information from users. A form usually needs a server or JavaScript to process its data.</p>
+            <dl>
+                <dt><code>&lt;form&gt;</code></dt>
+                <dd>Groups controls for submission. Common attributes include <code>action</code>, <code>method</code>, <code>enctype</code>, and <code>autocomplete</code>.</dd>
+                <dt><code>&lt;label&gt;</code></dt>
+                <dd>Names a form control. Connect it to a control using a matching <code>for</code> and <code>id</code>.</dd>
+                <dt><code>&lt;input&gt;</code></dt>
+                <dd>A void form control. Its <code>type</code> selects a kind of input, such as <code>text</code>, <code>email</code>, <code>password</code>, <code>number</code>, <code>date</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or <code>submit</code>.</dd>
+                <dt><code>&lt;textarea&gt;</code></dt>
+                <dd>A multi-line text input. Common attributes include <code>rows</code>, <code>cols</code>, <code>name</code>, and <code>maxlength</code>.</dd>
+                <dt><code>&lt;button&gt;</code></dt>
+                <dd>A button. Set <code>type</code> to <code>submit</code>, <code>reset</code>, or <code>button</code> to make its purpose clear.</dd>
+                <dt><code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, and <code>&lt;optgroup&gt;</code></dt>
+                <dd>Create a choice menu, its choices, and labeled groups of choices.</dd>
+                <dt><code>&lt;datalist&gt;</code></dt>
+                <dd>Provides suggested options for an input whose <code>list</code> attribute refers to its <code>id</code>.</dd>
+                <dt><code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code></dt>
+                <dd>Group related form controls and provide a caption for the group.</dd>
+                <dt><code>&lt;output&gt;</code></dt>
+                <dd>Represents the result of a calculation or user action.</dd>
+                <dt><code>&lt;progress&gt;</code></dt>
+                <dd>Shows the completion progress of a task. It can use <code>value</code> and <code>max</code>.</dd>
+                <dt><code>&lt;meter&gt;</code></dt>
+                <dd>Shows a measurement within a known range, using attributes such as <code>min</code>, <code>max</code>, and <code>value</code>.</dd>
+            </dl>
+            <p>Frequently used form attributes include <code>name</code> (submitted field name), <code>value</code> (current or default value), <code>placeholder</code> (a hint, not a replacement for a label), <code>required</code>, <code>disabled</code>, <code>readonly</code>, <code>min</code>, <code>max</code>, <code>step</code>, <code>minlength</code>, <code>maxlength</code>, <code>pattern</code>, and <code>autocomplete</code>.</p>
+        </section>
+
+        <section id="semantic">
+            <h2>8. Semantic page sections</h2>
+            <p>Semantic elements describe the role of their content. They help browsers, search systems, and assistive technology understand a page.</p>
+            <dl>
+                <dt><code>&lt;header&gt;</code></dt>
+                <dd>Introductory content for a page or section.</dd>
+                <dt><code>&lt;nav&gt;</code></dt>
+                <dd>A section containing important navigation links.</dd>
+                <dt><code>&lt;main&gt;</code></dt>
+                <dd>The dominant content of the page. A page should generally have one visible main content area.</dd>
+                <dt><code>&lt;section&gt;</code></dt>
+                <dd>A thematic group of content, usually with a heading.</dd>
+                <dt><code>&lt;article&gt;</code></dt>
+                <dd>Self-contained content that could make sense on its own, such as a post or news story.</dd>
+                <dt><code>&lt;aside&gt;</code></dt>
+                <dd>Related or supplementary content.</dd>
+                <dt><code>&lt;footer&gt;</code></dt>
+                <dd>Footer information for a page or section.</dd>
+                <dt><code>&lt;address&gt;</code></dt>
+                <dd>Contact information for the nearest article or page.</dd>
+            </dl>
+        </section>
+
+        <section id="interactive">
+            <h2>9. Interactive and scripting elements</h2>
+            <dl>
+                <dt><code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code></dt>
+                <dd>Create a disclosure widget that the user can open and close. <code>summary</code> is its visible heading.</dd>
+                <dt><code>&lt;dialog&gt;</code></dt>
+                <dd>Represents a dialog box. Opening and managing it generally requires JavaScript.</dd>
+                <dt><code>&lt;script&gt;</code></dt>
+                <dd>Embeds or refers to JavaScript. It is intentionally not used to add behavior in this HTML-only guide.</dd>
+                <dt><code>&lt;noscript&gt;</code></dt>
+                <dd>Provides fallback content when scripting is unavailable or disabled.</dd>
+                <dt><code>&lt;template&gt;</code></dt>
+                <dd>Holds HTML that is not displayed until code uses it.</dd>
+                <dt><code>&lt;slot&gt;</code></dt>
+                <dd>Marks a placeholder in a web component's shadow tree.</dd>
+            </dl>
+        </section>
+
+        <section id="attributes">
+            <h2>10. Attributes</h2>
+            <p>Attributes appear in an element's opening tag as a name and, usually, a value: <code>&lt;a href="https://example.com"&gt;Example&lt;/a&gt;</code>. Quote attribute values. Some attributes are Boolean: their presence means true, and their absence means false. For example, <code>&lt;input required&gt;</code>.</p>
+
+            <h3>Common global attributes</h3>
+            <p>Global attributes can be used on many HTML elements, subject to each element's rules.</p>
+            <dl>
+                <dt><code>id</code></dt>
+                <dd>A unique identifier in the document; useful for links, labels, and scripts.</dd>
+                <dt><code>class</code></dt>
+                <dd>A space-separated set of names for identifying or grouping elements.</dd>
+                <dt><code>title</code></dt>
+                <dd>Advisory text about an element. Do not rely on it as the only way to communicate important information.</dd>
+                <dt><code>lang</code></dt>
+                <dd>The language of the element's content, commonly set on <code>html</code>.</dd>
+                <dt><code>dir</code></dt>
+                <dd>The text direction: <code>ltr</code>, <code>rtl</code>, or <code>auto</code>.</dd>
+                <dt><code>hidden</code></dt>
+                <dd>Indicates that the element is not currently relevant and should not be presented.</dd>
+                <dt><code>tabindex</code></dt>
+                <dd>Controls keyboard focus behavior. Use carefully and preserve a logical tab order.</dd>
+                <dt><code>contenteditable</code></dt>
+                <dd>Indicates whether the user can edit an element's content.</dd>
+                <dt><code>draggable</code></dt>
+                <dd>Indicates whether an element can be dragged; behavior commonly requires scripting.</dd>
+                <dt><code>spellcheck</code></dt>
+                <dd>Hints whether spelling and grammar may be checked.</dd>
+                <dt><code>translate</code></dt>
+                <dd>Hints whether an element's text should be translated.</dd>
+                <dt><code>autocapitalize</code></dt>
+                <dd>Hints how text entry may capitalize input on supporting devices.</dd>
+                <dt><code>accesskey</code></dt>
+                <dd>Suggests a keyboard shortcut. Shortcuts can conflict with browser or assistive-technology commands.</dd>
+                <dt><code>data-*</code></dt>
+                <dd>Custom data attributes, such as <code>data-category="books"</code>, for page-specific data.</dd>
+                <dt><code>role</code> and <code>aria-*</code></dt>
+                <dd>Accessibility attributes that can describe roles and properties. Prefer native semantic HTML and use ARIA only when needed.</dd>
+                <dt><code>style</code></dt>
+                <dd>An attribute for inline CSS. It is mentioned for completeness but is not used here because this guide is HTML-only.</dd>
+                <dt><code>on*</code> event attributes</dt>
+                <dd>Attributes such as <code>onclick</code> can run JavaScript. They are not used in this HTML-only guide; keep behavior in separate, maintainable code when scripting is needed.</dd>
+            </dl>
+
+            <h3>Frequently used element-specific attributes</h3>
+            <dl>
+                <dt>Links: <code>href</code>, <code>target</code>, <code>rel</code>, <code>download</code></dt>
+                <dd>Set a destination, browsing context, relationship, or download behavior on a link.</dd>
+                <dt>Images: <code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code>, <code>loading</code></dt>
+                <dd>Set an image source, text alternative, dimensions, or loading hint.</dd>
+                <dt>Media: <code>src</code>, <code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>muted</code>, <code>poster</code></dt>
+                <dd>Set media source and playback options; <code>poster</code> specifies a preview image for video.</dd>
+                <dt>Forms: <code>action</code>, <code>method</code>, <code>name</code>, <code>type</code>, <code>value</code>, <code>required</code></dt>
+                <dd>Set form submission behavior and identify or configure controls.</dd>
+                <dt>Tables: <code>scope</code>, <code>colspan</code>, <code>rowspan</code></dt>
+                <dd>Describe header coverage or let a cell span columns or rows.</dd>
+                <dt>Metadata: <code>charset</code>, <code>name</code>, <code>content</code></dt>
+                <dd>Describe document metadata, such as character encoding or a page description.</dd>
+                <dt>Resources: <code>rel</code>, <code>href</code>, <code>media</code>, <code>type</code></dt>
+                <dd>Describe a linked resource and its intended use.</dd>
+            </dl>
+
+            <h3>Character references</h3>
+            <p>Write reserved characters using character references when they would otherwise be interpreted as markup. For example, <code>&amp;lt;</code> displays &lt;, <code>&amp;gt;</code> displays &gt;, and <code>&amp;amp;</code> displays &amp;. Quotes in attribute values can be written as <code>&amp;quot;</code>.</p>
+        </section>
+
+        <section id="obsolete">
+            <h2>11. Obsolete elements</h2>
+            <p>Some old HTML tags are obsolete or nonconforming and should not be used in new work. Examples include <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, <code>&lt;marquee&gt;</code>, <code>&lt;big&gt;</code>, <code>&lt;strike&gt;</code>, and <code>&lt;frameset&gt;</code>. Use meaningful HTML for structure and a stylesheet when visual styling is needed.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML evolves over time. This guide introduces the main standard elements and common attributes; it is not an exhaustive specification of every attribute combination or browser feature.</p>
+    </footer>
+</body>
+</html>

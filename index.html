@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My protfolio</title>
+        <meta charset="UTF-8">
+        <style>
+            .lead {
+                border: 1px solid black;
+                border-radius: 5px;
+                border-width: 2px;
+                border-style: dotted;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #e1eaec;
+            }
+
+        </style>
+    </head>
+    <body>
+    <header>
+        <nav>
+            <a href="#">MY PORTFOLIO</a>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#my-project.html">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#about">about me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Laureen Muthoni</h1>
+            <p>Aspiring software developer and a student pursuing bachelors of software development in the KCA university.</p>
+            <img src="muthoni.jpeg"  alt="Laureen Muthoni"  width="200">
+        </section>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, I'm Laureen, a student at the KCA university pursuing bachelors of software development.</p>
+            <p>My interests are coding, web designing and web developing</p>
+        </section>
+        
+        <section id="project">
+            <h2>My projects</h2>
+            <p class="lead">I have created and designed a website for online shopping of designer clothes.</p>
+            <a href="shop.html">project 1</a>
+            <br>
+            <p class="lead">In this project i have made a study guide for future develpoers on how to learn about <strong>HTML</strong></p>
+            <a href="project2.html">project 2</a>
+            <br>
+            <p class="lead">I have also been working on a project that works like a calculator, using python, that has other unique arithmatic operations such as floordivision,modulus and exponent. For now you can only key in not more than two numbers.</p>
+            <p>It is yet to be completed and i will be adding more features to it in the future.</p>
+            <a href="project3.py">project 3</a>
+        </section>
+    </main>
+    <footer>
+        <section id="contact">
+            <h2>contact</h2>
+            <p>you can contact me at:</p>
+            <p> my email <a href="email:2607578@kcau.ac.ke">2607578@kcau.ac.ke</a></p>
+            <a href="https://github.com/kimireen85-eng">https://github.com/kimireen85-eng</a></p>
+        </section>
+    </footer>
+        <h2>my skills</h2>
+        
+        
+            <div class="skill">
+                <p>HTML-75%</p>
+                <div style="background-color: #ddd; width: 100%; height: 20px;"></div>
+                    <div style="background-color: #4CAF50; width: 75%; height: 100%;"></div>
+            </div>
+            <div class="skill">
+                <p>CSS-30%</p>
+                <div style="background-color: #ddd; width: 100%; height: 20px;"></div>
+                    <div style="background-color: #4CAF50; width: 60%; height: 100%;"></div>
+            </div>
+            <div class="skill">
+                <p>JavaScript-30%</p>
+                <div style="background-color: #ddd; width: 100%; height: 20px;"></div>
+                    <div style="background-color: #4CAF50; width: 50%; height: 100%;"></div>
+            </div>
+            <div class="skill">
+                <p>Python-70%</p>
+                <div style="background-color: #ddd; width: 100%; height: 20px;"></div>
+                    <div style="background-color: #4CAF50; width: 70%; height: 100%;"></div>
+            </div>
+            <div class="skill">
+                <p>Java-40%</p>
+                <div style="background-color: #ddd; width: 100%; height: 20px;"></div>
+                    <div style="background-color: #4CAF50; width: 40%; height: 100%;"></div>
+            </div>
+        <br>
+        <hr>
+        <p>Thank you for visiting my portfolio!</p>
+        
+    </body>
+</html>
